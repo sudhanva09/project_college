@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include<time.h>
+int main()
+{
+    
+    char playpress;
+    n=5;
+    time_t t;
+    srand((unsigned) time(&t));
+    
+print("\npress enter key for first player\n");
+scanf("%c",&playpress);
+   
+   if(playpress=='\r')
+    firstplayer();
+   
+   
+   
+    return 0;
+}
+
+void firstplayer(char choice)
+{
+ do
+    {
+
+    printf("number on dice=%d\n",rand()%6);
+
+    printf(" press space for 2nd players turn\n");
+    scanf("%d",&choice);
+if(choice==' ')
+    secondplayer();
+    }
+    while (choice==1);    
+
+}
+
+void secondplayer(char choice)
+{
+     do
+    {
+
+    printf("number on dice=%d\n",rand()%6);
+
+    printf("press enter for first players choice\n");
+    scanf("%d",&choice);
+if (choice=='\r')
+    firstplayer();
+    }
+    while (choice==1);
+}
